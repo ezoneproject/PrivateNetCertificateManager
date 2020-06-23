@@ -1,3 +1,11 @@
 server:
   port: 7070
+  servlet:
+    context-path: /certmgr
 
+logging:
+  level:
+    root: DEBUG
+    com:
+      ezoneproject:
+        certmgr: DEBUG
