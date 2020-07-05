@@ -24,9 +24,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 class CertmgrSecurity : WebMvcConfigurer {
 
     override fun addViewControllers(registry: ViewControllerRegistry) {
-        //registry.addViewController("/").setViewName("index2");
-        //registry.addViewController("/hello").setViewName("hello");
-        registry.addViewController("/login").setViewName("login")
-        registry.addViewController("/a").setViewName("index")
+        //registry.addViewController("/login").setViewName("login")
+        //registry.addViewController("/a").setViewName("index")
     }
 }

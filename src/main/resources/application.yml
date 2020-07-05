@@ -1,11 +1,22 @@
 server:
+  error:
+    include-exception: true
+    include-stacktrace: on_param
   port: 7070
   servlet:
     context-path: /certmgr
 
+# springMacroRequestContext.model._csrf.parameterName
+# _csrf.parameterName
+spring:
+  mustache:
+    expose-request-attributes: true
+
 logging:
   level:
-    root: DEBUG
+    root: INFO
+    org:
+      springframework: DEBUG
     com:
       ezoneproject:
         certmgr: DEBUG
