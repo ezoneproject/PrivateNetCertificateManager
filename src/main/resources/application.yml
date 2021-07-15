@@ -1,6 +1,25 @@
 server:
+  error:
+    include-exception: true
+    include-stacktrace: on_param
   port: 8090
+  servlet:
+    context-path: /certmgr
 
 openssl:
   execute: "C:/Windows/System32/OpenSSH/ssh.exe"
 
+# springMacroRequestContext.model._csrf.parameterName
+# _csrf.parameterName
+spring:
+  mustache:
+    expose-request-attributes: true
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework: DEBUG
+    com:
+      ezoneproject:
+        certmgr: DEBUG
