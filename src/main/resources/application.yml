@@ -6,8 +6,10 @@ server:
   servlet:
     context-path: /certmgr
 
-external-openssl:
-  path: "C:/Windows/System32/OpenSSH/ssh.exe"
+cert-mgr:
+  openssl-path: "C:/Windows/System32/OpenSSH/ssh.exe"
+  data-dir: ./data
+  log-dir: ./log
 
 # springMacroRequestContext.model._csrf.parameterName
 # _csrf.parameterName

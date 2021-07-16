@@ -19,15 +19,16 @@ class LoginController {
 
     @GetMapping
     fun printForm(): String {
-        log.info { "GET Start login .........." }
-
+        log.info { "GET login start .........." }
         return "login"
     }
 
+    /*
     @PostMapping
     fun login(model: Model, @RequestParam map: Map<String, String>): String {
         log.info { "POST Start login .......... ${map}" }
 
+        // new UsernamePasswordAuthenticationToken("username", "password")
         val result: Authentication = UsernamePasswordAuthenticationToken(
             map["username"], "N/A",
             AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"))
@@ -35,4 +36,5 @@ class LoginController {
 
         return "redirect:/home"
     }
+     */
 }

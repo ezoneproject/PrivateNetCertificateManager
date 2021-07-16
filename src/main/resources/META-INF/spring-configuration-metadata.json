@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "cert-mgr.openssl-path",
+      "type": "java.lang.String",
+      "description": "Description for cert-mgr.openssl-path.",
+      "sourceType": "com.ezoneproject.privatecertmgr.CertMgrConfig"
+    },
+    {
+      "name": "cert-mgr.data-dir",
+      "type": "java.lang.String",
+      "description": "Description for cert-mgr.data-dir.",
+      "sourceType": "com.ezoneproject.privatecertmgr.CertMgrConfig"
+    },
+    {
+      "name": "cert-mgr.log-dir",
+      "type": "java.lang.String",
+      "description": "Description for cert-mgr.log-dir.",
+      "sourceType": "com.ezoneproject.privatecertmgr.CertMgrConfig"
+    }
+  ]
+}
