@@ -2,12 +2,12 @@ server:
   error:
     include-exception: true
     include-stacktrace: on_param
-  port: 8090
+  port: 18080
   servlet:
     context-path: /certmgr
 
-openssl:
-  execute: "C:/Windows/System32/OpenSSH/ssh.exe"
+external-openssl:
+  path: "C:/Windows/System32/OpenSSH/ssh.exe"
 
 # springMacroRequestContext.model._csrf.parameterName
 # _csrf.parameterName
