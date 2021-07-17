@@ -12,6 +12,8 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">{{#i18n}}login.login_box_msg{{/i18n}}</p>
+            <!-- todo -->
+            <p class="login-box-msg">Error: {sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
 
             <form action="login" method="post">
                 <div class="input-group mb-3">

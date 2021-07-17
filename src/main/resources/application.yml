@@ -24,4 +24,4 @@ logging:
       springframework: DEBUG
     com:
       ezoneproject:
-        certmgr: DEBUG
+        privatecertmgr: DEBUG

@@ -17,7 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 class PrivateCertMgrSecurityConfig : WebSecurityConfigurerAdapter(false) {
     private val log = KotlinLogging.logger {}
 
@@ -33,7 +33,7 @@ class PrivateCertMgrSecurityConfig : WebSecurityConfigurerAdapter(false) {
         http
             //.csrf().disable().headers().frameOptions().disable().and()
             .authorizeRequests()
-            .antMatchers("/health-check", "/error", "/login", "/unauthorized/**").permitAll()
+            .antMatchers("/health-check", "/error", "/unauthorized/**").permitAll()
             .anyRequest().authenticated()
             .and().exceptionHandling()
             //.authenticationEntryPoint(LoginUrlAuthenticationEntryPoint("/login"))
@@ -43,7 +43,7 @@ class PrivateCertMgrSecurityConfig : WebSecurityConfigurerAdapter(false) {
             //.and().rememberMe()
             //.and().formLogin().loginPage("/login").successForwardUrl("/")
             .and().formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll()
-            .and().logout()
+            .and().logout().permitAll()
             .and().headers()
     }
 

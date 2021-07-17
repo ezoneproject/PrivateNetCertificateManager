@@ -20,6 +20,8 @@ class CertMgrAuthenticationProvider : AbstractUserDetailsAuthenticationProvider(
 
     override fun additionalAuthenticationChecks(userDetails: UserDetails?, authentication: UsernamePasswordAuthenticationToken?) {
         // password check -> AuthenticationException
+        // authentication -> 입력
+        // authentication.principal -> ID, auth.credentials -> pw
 
         log.debug { "UserDetails => ${userDetails?.username}/${userDetails?.password}" }
     }
