@@ -12,10 +12,12 @@ cert-mgr:
   log-dir: ./log
 
 # springMacroRequestContext.model._csrf.parameterName
-# _csrf.parameterName
+# _csrf.parameterName, _csrf.token
 spring:
   mustache:
+    expose-spring-macro-helpers: true
     expose-request-attributes: true
+    #expose-session-attributes: true
 
 logging:
   level:

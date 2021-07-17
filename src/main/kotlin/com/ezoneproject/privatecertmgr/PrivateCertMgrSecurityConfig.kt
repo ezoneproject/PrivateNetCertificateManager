@@ -33,7 +33,7 @@ class PrivateCertMgrSecurityConfig : WebSecurityConfigurerAdapter(false) {
         http
             //.csrf().disable().headers().frameOptions().disable().and()
             .authorizeRequests()
-            .antMatchers("/health-check", "/error", "/unauthorized/**").permitAll()
+            .antMatchers("/health-check", "/error", "/login/forgot", "/login/register", "/unauthorized/**").permitAll()
             .anyRequest().authenticated()
             .and().exceptionHandling()
             //.authenticationEntryPoint(LoginUrlAuthenticationEntryPoint("/login"))

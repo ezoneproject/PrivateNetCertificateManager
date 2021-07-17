@@ -12,8 +12,6 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">{{#i18n}}login.login_box_msg{{/i18n}}</p>
-            <!-- todo -->
-            <p class="login-box-msg">Error: {sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
 
             <form action="login" method="post">
                 <div class="input-group mb-3">
@@ -32,6 +30,9 @@
                         </div>
                     </div>
                 </div>
+                {{#ERROR}}
+                    <p class="login-box-msg">{{ERROR.message}}</p>
+                {{/ERROR}}
                 <div class="row">
                     <div class="col-8">
                         <div class="icheck-primary">
@@ -52,10 +53,10 @@
             <!-- /.social-auth-links -->
 
             <p class="mb-1">
-                <a href="forgot-password.html">I forgot my password</a>
+                <a href="{{springMacroRequestContext.contextPath}}/login/forgot">I forgot my password</a>
             </p>
             <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="{{springMacroRequestContext.contextPath}}/login/register" class="text-center">Register a new membership</a>
             </p>
         </div>
         <!-- /.login-card-body -->

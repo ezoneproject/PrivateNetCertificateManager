@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
+import javax.servlet.http.HttpServletRequest
 
 @Controller
 @RequestMapping("/login")
@@ -18,9 +19,25 @@ class LoginController {
     private val log = KotlinLogging.logger {}
 
     @GetMapping
-    fun printForm(): String {
+    fun printForm(request: HttpServletRequest, model: Model): String {
         log.info { "GET login start .........." }
+
+        if (request.getParameter("error") != null) {
+            model.addAttribute("ERROR", request.getSession().getAttribute("SPRING_SECURITY_LAST_EXCEPTION"))
+            request.getSession().removeAttribute("SPRING_SECURITY_LAST_EXCEPTION")
+        }
+
         return "login"
+    }
+
+    @GetMapping("/forgot")
+    fun forgotPasswordForm(): String {
+        return "forgot"
+    }
+
+    @GetMapping("/register")
+    fun registerForm(): String {
+        return "register"
     }
 
     /*
