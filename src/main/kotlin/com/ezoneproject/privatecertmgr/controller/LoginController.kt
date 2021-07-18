@@ -32,12 +32,14 @@ class LoginController {
 
     @GetMapping("/forgot")
     fun forgotPasswordForm(): String {
-        return "forgot"
+        TODO("추후 구현")
+        //return "forgot"
     }
 
     @GetMapping("/register")
     fun registerForm(): String {
-        return "register"
+        TODO("추후 구현")
+        //return "register"
     }
 
     /*
